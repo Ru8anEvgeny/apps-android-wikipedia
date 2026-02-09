@@ -1,0 +1,12 @@
+androidx.appcompat.widget.AppCompatImageView
+id	@id/imageViewCentered
+
+
+org.wikipedia.views.AppTextView
+id	@id/primaryTextView
+text	The Free Encyclopedia
+…in over 300 languages
+onboarding_welcome_title_v2
+
+
+com.google.android.material.button.MaterialButton
