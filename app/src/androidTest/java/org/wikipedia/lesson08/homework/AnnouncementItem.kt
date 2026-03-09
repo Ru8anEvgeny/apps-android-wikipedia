@@ -10,24 +10,24 @@ import org.hamcrest.Matcher
 import org.wikipedia.R
 import org.wikipedia.views.WikiCardView
 
-class AnnouncementItem(matcher: Matcher<View>) : KRecyclerItem<AnnouncementItem>(matcher) {
-    val card = KView(matcher){
+class AnnouncementItem(parent: Matcher<View>) : KRecyclerItem<AnnouncementItem>(parent) {
+    val card = KView(parent) {
         isInstanceOf(WikiCardView::class.java)
     }
 
-    val image = KImageView(matcher){
+    val image = KImageView(parent) {
         withId(R.id.view_announcement_header_image)
     }
 
-    val customizeText = KTextView(matcher){
+    val customizeText = KTextView(parent) {
         withId(R.id.view_announcement_text)
     }
 
-    val customizeButton = KButton(matcher){
+    val customizeButton = KButton(parent) {
         withId(R.id.view_announcement_action_positive)
     }
 
-    val goItButton = KButton(matcher){
+    val goItButton = KButton(parent) {
         withId(R.id.view_announcement_action_negative)
     }
 }

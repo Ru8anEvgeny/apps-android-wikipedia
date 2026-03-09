@@ -27,6 +27,14 @@ object OnboardingScreen : KScreen<OnboardingScreen>() {
         }
     )
 
+    val continuaButton = KButton {
+        withId(R.id.fragment_onboarding_forward_button)
+    }
+
+    val skipButton = KButton {
+        withId(R.id.fragment_onboarding_skip_button)
+    }
+
 
 }
 
