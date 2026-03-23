@@ -25,23 +25,26 @@ class SimpleTest : TestCase() {
         run("Кнопка Skip отображается на экране онбординга") {
             // далее обращаемся к экрану на котором хотим что-то сделать
             OnboardingScreen {
-                skipButton.isDisplayed()// тут проверили, что на экране OnboardingScreen отображается кнопка skipButton
-                skipButton.hasAnyText() // содердит любой произвольный текс
-                skipButton.hasText("Skip")// содержит текст скип
+                step("Проверяет что кнопка Skip отображается") {
+                    skipButton.isDisplayed()// тут проверили, что на экране OnboardingScreen отображается кнопка skipButton
+                    skipButton.hasAnyText() // содердит любой произвольный текс
+                    skipButton.hasText("Skip")// содержит текст скип
 
-                //можно писать так
-                skipButton {
-                    isDisplayed()
-                    hasAnyText()
-                    hasText("Skip")
+                    //можно писать так
+                    skipButton {
+                        isDisplayed()
+                        hasAnyText()
+                        hasText("Skip")
+                    }
+                }
+                step("Нажимает на кнопку continuaButton ") {
+                    continuaButton.click() // нажали на кнопку continuaButton
                 }
 
-                continuaButton.click() // нажали на кнопку continuaButton
-                skipButton {
-                    isDisplayed()
-                    hasAnyText()
-                    hasText("Skip")
+                step("Проверяет, что кнопка Skip отображается") {
+                    skipButton.isDisplayed()
                 }
+
             }
 
             //списочные эелементы. Можем обращаться к объекту пейджера и вызывать методо chaildAt -
