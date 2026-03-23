@@ -82,12 +82,16 @@ class Tests : TestCase() {
         step("Проверяет, что блок Featured Article не отображается на экране Explore (doesNotExist)") {
             ExploreScreen {
                 logo.isDisplayed()
+
+                items.childWith<AnnouncementItem> {
+                    withDescendant {
+                        withText("Customize")
+                    }
+                } perform {
+                    doesNotExist()
+                }
             }
 
-            KTextView {
-                withId(R.id.view_announcement_text)
-                withText("Customize your Explore feed")
-            }.doesNotExist()
         }
     }
 }

@@ -25,6 +25,10 @@ object ExploreScreen : KScreen<ExploreScreen>(){ // создаем описан�
         withId(R.id.main_toolbar_wordmark)
     }
 
+    val closeButton = KImageView {
+        withId(R.id.closeButton)
+    }
+
     val items = KRecyclerView(
         builder = {
            withId(R.id.feed_view)
@@ -33,6 +37,7 @@ object ExploreScreen : KScreen<ExploreScreen>(){ // создаем описан�
             itemType(::SearchItem)
             itemType(::AnnouncementItem)
             itemType(::TopReadItem)
+            itemType(::NewsItem)
         }
     )
 }
