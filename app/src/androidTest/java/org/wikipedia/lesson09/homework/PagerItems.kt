@@ -28,7 +28,7 @@ class PagerItems(matcher: Matcher<View>) : KViewPagerItem<PagerItems>(matcher) {
             withId(R.id.languageListContainer)
         },
         itemTypeBuilder = {
-            itemType(::LanguageItems)
+            //itemType(::LanguageItems)
         }
 
     )

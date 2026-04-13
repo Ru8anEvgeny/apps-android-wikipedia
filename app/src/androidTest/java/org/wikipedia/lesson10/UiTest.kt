@@ -16,7 +16,7 @@ class UiTest : TestCase() {
     @Test
     fun checkSkip() {
         run("Проверка отображения кнопки скип") {
-            OnboardingUiScreen.skipButton.isDisplayed()
+            OnboardingUiScreen1.skipButton.isDisplayed()
             OnboardingScreen.skipButton.isDisplayed()
 
         }

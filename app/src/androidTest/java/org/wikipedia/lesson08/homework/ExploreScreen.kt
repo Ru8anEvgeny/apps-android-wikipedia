@@ -13,6 +13,7 @@ import io.github.kakaocup.kakao.text.KButton
 import io.github.kakaocup.kakao.text.KTextView
 import org.hamcrest.Matcher
 import org.wikipedia.feed.view.FeedView
+import org.wikipedia.lesson8.homework.AnnouncementCard
 import org.wikipedia.views.WikiCardView
 
 object ExploreScreen : KScreen<ExploreScreen>(){ // создаем описание главного экрана
@@ -35,9 +36,10 @@ object ExploreScreen : KScreen<ExploreScreen>(){ // создаем описан�
         },
         itemTypeBuilder = {
             itemType(::SearchItem)
-            itemType(::AnnouncementItem)
+            itemType(::AnnouncementCard)
             itemType(::TopReadItem)
             itemType(::NewsItem)
+            itemType(::FeaturedArticle)
         }
     )
 }
